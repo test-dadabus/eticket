@@ -1,0 +1,147 @@
+<!DOCTYPE >
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的电子票</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <script type="text/javascript">
+        !function(a){function b(){var b=g.getBoundingClientRect().width;a.rem=(b/6.4>100?100:(b/6.4<50?50:b/6.4)),g.style.fontSize=a.rem+"px"}var g=a.document.documentElement,e;a.addEventListener("resize",function(){clearTimeout(e),e=setTimeout(b,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(e),e=setTimeout(b,300))},!1),b()}(window);
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <style>
+        .wrapper{
+            padding-top: 0rem;
+            width: auto;
+        }
+        .pageBgColor{background-color:#717171}
+        #eticket_section  .carNumber_wrap{
+            text-align:center;
+            height:1.9rem;
+            line-height: 1.9rem;
+           
+            /*background-image: url(../image/ticket.png);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 100% 4rem;*/
+        }
+        @keyframes twinkling{0%{color:rgba(255,255,255,1)}
+            10%{color:rgba(255,0,0,1)}
+            20%{color:rgba(255,165,0,1)}
+            30%{color:rgba(255,255,0,1)}
+            40%{color:rgba(0,255,0,1)}
+            50%{color:rgba(0,127,255,1)}
+            60%{color:rgba(0,0,255,1)}
+            70%{color:rgba(139,0,255,1)}
+        }
+        @-moz-keyframes twinkling{0%{color:rgba(255,255,255,1)}
+            10%{color:rgba(255,0,0,1)}
+            20%{color:rgba(255,165,0,1)}
+            30%{color:rgba(255,255,0,1)}
+            40%{color:rgba(0,255,0,1)}
+            50%{color:rgba(0,127,255,1)}
+            60%{color:rgba(0,0,255,1)}
+            70%{color:rgba(139,0,255,1)}
+        }
+        @-webkit-keyframes twinkling{0%{color:rgba(255,255,255,1)}
+            10%{color:rgba(255,0,0,1)}
+            20%{color:rgba(255,165,0,1)}
+            30%{color:rgba(255,255,0,1)}
+            40%{color:rgba(0,255,0,1)}
+            50%{color:rgba(0,127,255,1)}
+            60%{color:rgba(0,0,255,1)}
+            70%{color:rgba(139,0,255,1)}
+        }
+        @-o-keyframes twinkling{0%{color:rgba(255,255,255,1)}
+            10%{color:rgba(255,0,0,1)}
+            20%{color:rgba(255,165,0,1)}
+            30%{color:rgba(255,255,0,1)}
+            40%{color:rgba(0,255,0,1)}
+            50%{color:rgba(0,127,255,1)}
+            60%{color:rgba(0,0,255,1)}
+            70%{color:rgba(139,0,255,1)}
+        }
+        #eticket_section    .carNumber{
+            -webkit-animation:twinkling 3s infinite ease-in-out;-moz-animation:twinkling 3s infinite ease-in-out;-o-animation:twinkling 3s infinite ease-in-out;animation:twinkling 3s infinite ease-in-out;font-size:1rem;font-weight:bold;
+        }
+        #eticket_section  .container{
+            /* position: absolute;
+            top:1.68rem;
+            width: 6.4rem;
+            bottom: 0; */
+            margin:0rem auto;font-family:'微软雅黑';
+            padding: .33rem 0;
+            background-image: url(image/ticket.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #eticket_section    .dateTime{
+            /* position: absolute;
+            top:50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); */
+            padding: .35rem 0;
+            text-align:center;background-color:#717171;color:#000;font-weight:bold;
+            /* width: 6.4rem; */
+        }
+        #eticket_section    .dateTime .date{font-size:1rem; line-height: 1rem; padding:.34rem 0}
+        #eticket_section    .dateTime .time{margin:0 auto;/*width:5.4rem;*//*border-top:2px solid #000;*/font-size:1.6rem; line-height: 1.6rem; /*padding:.2rem 0*/}
+        #eticket_section    .empty_box{text-align:center;color:#d7d7d7;padding:.2rem 0;border:0 solid #e2e2e2}
+        #eticket_section    .empty_box img{vertical-align:middle;margin:0 .1rem 0 0;width:1.08rem;height:.89rem}
+        #eticket_section,body{ background: #454545 ;  }
+        #eticket_section  .dateTime .date span,#eticket_section    .dateTime .time span { font-weight: bold;}
+        #eticket_section .num { width: 5.72rem; height: .42rem; margin:0 auto; background:url(image/line_bottom.png) no-repeat; background-size: 100% 100%;}
+        #eticket_section .on_site,#eticket_section .on,#eticket_section .off_site { font-size: .48rem; font-weight: bold; color: rgba(0,0,0,0.7)}
+        #eticket_section .on { font-size: .3rem;}
+        #eticket_section .line_bottom {width: 5.72rem; height: .42rem; margin:0 auto; background:url(image/line_bottom.png) no-repeat; background-size: 100% 100%;}
+    </style>
+</head>
+<body>
+<div class="wrapper" id="eticket_section" class="pageBgColor">
+    <div class="ddb_appContent"></div>
+    <div class="carNumber_wrap"><span class="carNumber"></span></div>
+    <div class="container">
+        <!--<div class="empty_box"><img src="image/empty_icon.png" />电子票待生成/已过期</div>-->
+        <div class="dateTime">
+            <div class="date" contenteditable="true"><span></span></div>
+            <div class="time"><span></span></div>
+            <div class="num">&nbsp;</div>
+            <div class="on_site">&nbsp;</div>
+            <div class="on">至</div>
+            <div class="off_site">&nbsp;</div>
+            <div class="line_bottom"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/base_new.js?v=1.20.01"></script>
+<script>
+    /*window.up_ticket = function(str){
+        var obj = JSON.parse(str);
+        var item = obj.eticket;
+        if(item){
+            $("#eticket_section .carNumber").text(item.line_card ||item.car_number);
+            var date = new Date(item.start_date.replace(/-/g,'/'));
+            if (date) {
+                console.log(item);
+                $("#eticket_section .date span").text((date.getMonth() + 1) + "月" + date.getDate() + "日");
+            }
+            $("#eticket_section .time span").text(item.start_time.slice(0, -3));
+            $("#eticket_section .dateTime").css("background-color", item.ticket_color);
+            $("#eticket_section .on_site").text(item.on_site_name);
+            $("#eticket_section .off_site").text(item.off_site_name);
+        }
+    };*/ 
+	$("#eticket_section .carNumber").text("粤BQ9521");
+	$("#eticket_section .date span").text("9月10日");
+	$("#eticket_section .time span").text("07:45");
+	$("#eticket_section .dateTime").css("background-color", "#ff4777");
+	$("#eticket_section .on_site").text("红树福苑(公交站)");
+	$("#eticket_section .off_site").text("中信大厦");
+</script>
+</body>
+</html>
