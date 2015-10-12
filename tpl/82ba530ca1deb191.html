@@ -355,9 +355,9 @@
         //测试数据
 
         //司机端显示 乘客手机号xxx
-        if(common && +common.login_type === 2){
+        //if(common && +common.login_type === 2){
             $("#driver_type").show();
-        }
+        //}
 
         // 电子票底部动画配置
         item.ticket_ad = {
@@ -490,7 +490,7 @@
 
     $(".wrapper").removeClass("showNone");
     ddb.cookie('wx_mobile', '18026928316');
-    var s = '{"eticket":{"ticket_code":"1234567890123456-yyyymmdd-1","start_date":"2015-10-08","start_time":"17:25:00","line_start_time":"17:25:00","on_site_name":"中信大厦","on_site_lng":"114.100282","on_site_lat":"22.539992","off_site_name":"红树福苑(公交站)","off_site_lng":"114.044876","off_site_lat":"22.510717","tog_line_id":"1234","line_code":"1234-1234-1234","is_checked":"0","ticket_color":"#faff72","car_number":"粤BQ9521","line_card":"","order_number":"1234567890123456","ticket_number":1,"ticket_version":1,"ticket_identifier":"0297","ticket_key":"a5dec062f9cd930fd9846ad61d6cb1de"} }';
+    var s = '{"eticket":{"ticket_code":"1234567890123456-yyyymmdd-1","start_date":"2015-10-12","start_time":"17:25:00","line_start_time":"17:25:00","on_site_name":"中信大厦","on_site_lng":"114.100282","on_site_lat":"22.539992","off_site_name":"红树福苑(公交站)","off_site_lng":"114.044876","off_site_lat":"22.510717","tog_line_id":"1234","line_code":"1234-1234-1234","is_checked":"0","ticket_color":"#faff72","car_number":"粤BQ9521","line_card":"","order_number":"1234567890123456","ticket_number":1,"ticket_version":1,"ticket_identifier":"0297","ticket_key":"a5dec062f9cd930fd9846ad61d6cb1de"} }';
     up_ticket(s);
   </script>
 </body>
