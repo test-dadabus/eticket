@@ -7,9 +7,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
 <meta name="msapplication-tap-highlight" content="no">
-<script src="../js/lib/wjs-setrem.js"></script>
-<link rel="stylesheet" href="../css/base-debug.css?rev=1.6.1-dev12">
-  <link rel="stylesheet" href="../css/city.css?v=20150827">
+<script src="http://static.wechat.dadabus.com/v2/res/src/js/lib/wjs-setrem.js?rev=ac13bc1900ed313284dc993950e4f8cc"></script>
+<link rel="stylesheet" href="http://static.wechat.dadabus.com/v2/res/src/css/base.css?rev=d31a9c1d4673384fb7803b869273aaac">
+  <link rel="stylesheet" href="../css/city.css?rev=20150827">
   <style>
     body { background: #454545; }
     .wrapper { padding-top: 0rem; width: 100%; height: 100%; overflow: hidden; }
@@ -259,9 +259,9 @@
   </div>
 
 
-  <script src="../js/lib/zepto.js"></script>
-<script src="../js/base-debug.js?rev=1.6.1-dev2"></script>
-  <script type="text/javascript" src="../js/lib/md5-debug.js"></script>
+  <script src="http://static.wechat.dadabus.com/v2/res/src/js/lib/zepto.js?rev=5a687527ead16ba2ca2e5035d52a5dd4"></script>
+<script src="http://static.wechat.dadabus.com/v2/res/src/js/base.js?rev=31df0ed7140010926bc9c5f2cfde872c"></script>
+  <script type="text/javascript" src="../js/lib/md5.js"></script>
   <script type="text/javascript" src="../js/ticket_name.js"></script>
   <script>
     window.timerMSG = null;
@@ -271,10 +271,10 @@
         clearTimeout(timerMSG);
         timerMSG = setTimeout(function(){
             $('#MSG').hide();
-        },2000)
+        },2000);
       }else{
         setTimeout(function(){
-          fnMSG(str)
+          fnMSG(str);
         },1000);
       }
       console.log(111);
@@ -359,15 +359,16 @@
             $("#driver_type").show();
         }
 
+        // 电子票底部动画配置
         item.ticket_ad = {
           mid_bg:{},
           left_button:{
-            image_url: "../image/etiket_new/active-btn-11.png",
-            target_url: 'http://www.rabbitpre.com/m/v2m6n2'
+            image_url: "../image/etiket_new/active-btn-movie.png",
+            target_url: 'http://cps.maizuo.com/changeUrl.htm?channelId=191&urlId=338'
           },
           bottom_animate:{
-            image_url: "../image/etiket_new/icon-11.png",
-            target_url: 'http://www.rabbitpre.com/m/v2m6n2'
+            image_url: "../image/etiket_new/active-icon-movie.png",
+            target_url: 'http://cps.maizuo.com/changeUrl.htm?channelId=191&urlId=338'
           }
         };
 
@@ -486,13 +487,11 @@
       }
     };
 
+
     $(".wrapper").removeClass("showNone");
     ddb.cookie('wx_mobile', '18026928316');
-    var s = '{"eticket":{"ticket_code":"1234567890123456-yyyymmdd-1","start_date":"2015-10-08","start_time":"17:25:00","line_start_time":"17:25:00","on_site_name":"中信大厦","on_site_lng":"114.100282","on_site_lat":"22.539992","off_site_name":"红树福苑(公交站)","off_site_lng":"114.044876","off_site_lat":"22.510717","tog_line_id":"1234","line_code":"1234-1234-1234","is_checked":"0","ticket_color":"#000000","car_number":"粤BM1191","line_card":"","order_number":"1234567890123456","ticket_number":1,"ticket_version":1,"ticket_identifier":"XXXX","ticket_key":"12345678901234567890123456789012"} }';
+    var s = '{"eticket":{"ticket_code":"1234567890123456-yyyymmdd-1","start_date":"2015-10-08","start_time":"17:25:00","line_start_time":"17:25:00","on_site_name":"中信大厦","on_site_lng":"114.100282","on_site_lat":"22.539992","off_site_name":"红树福苑(公交站)","off_site_lng":"114.044876","off_site_lat":"22.510717","tog_line_id":"1234","line_code":"1234-1234-1234","is_checked":"0","ticket_color":"#faff72","car_number":"粤BQ9521","line_card":"","order_number":"1234567890123456","ticket_number":1,"ticket_version":1,"ticket_identifier":"0297","ticket_key":"a5dec062f9cd930fd9846ad61d6cb1de"} }';
     up_ticket(s);
-
-
-
   </script>
 </body>
 </html>
