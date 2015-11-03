@@ -8,12 +8,10 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="msapplication-tap-highlight" content="no">
 <script src="http://static.wechat.dadabus.com/v2/res/src/js/lib/wjs-setrem.js?rev=ac13bc1900ed313284dc993950e4f8cc"></script>
-<link rel="stylesheet" href="http://static.wechat.dadabus.com/v2/res/src/css/base.css?rev=d31a9c1d4673384fb7803b869273aaac">
-  <link rel="stylesheet" href="../css/city.css?rev=20150827">
+<link rel="stylesheet" href="http://static.wechat.dadabus.com/v2/res/src/css/base.css?rev=cf451f371739b2a473efe8c818297154">
   <style>
     body { background: #454545; }
     .wrapper { padding-top: 0rem; width: 100%; height: 100%; overflow: hidden; }
-    #eticket_section  .carNumber_wrap { text-align: center; height: 1.5rem; line-height: 1.5rem; }
 
     /*字体颜色变化*/
     @keyframes twinkling{
@@ -98,46 +96,6 @@
       70%{background-color:#5b6792}
     }
 
-    /*缩放css*/
-    @keyframes scale_big{
-      0%{-o-transform: rotate(120deg) scale(0.3);-webkit-transform: rotate(120deg) scale(0.3);-moz-transform: rotate(120deg) scale(0.3);transform: rotate(120deg) scale(0.3);}
-      50%{-o-transform: rotate(240deg) scale(0.1);-webkit-transform: rotate(240deg) scale(0.1);-moz-transform: rotate(240deg) scale(0.1);transform: rotate(240deg) scale(0.1);}
-      100%{-o-transform: rotate(360deg) scale(1);-webkit-transform: rotate(360deg) scale(1);-moz-transform: rotate(360deg) scale(1);transform: rotate(360deg) scale(1);}
-    }
-    @-webkit-keyframes scale_big{
-      0%{-o-transform: rotate(120deg) scale(0.3);-webkit-transform: rotate(120deg) scale(0.3);-moz-transform: rotate(120deg) scale(0.3);transform: rotate(120deg) scale(0.3);}
-      50%{-o-transform: rotate(240deg) scale(0.1);-webkit-transform: rotate(240deg) scale(0.1);-moz-transform: rotate(240deg) scale(0.1);transform: rotate(240deg) scale(0.1);}
-      100%{-o-transform: rotate(360deg) scale(1);-webkit-transform: rotate(360deg) scale(1);-moz-transform: rotate(360deg) scale(1);transform: rotate(360deg) scale(1);}
-    }
-    @-moz-keyframes scale_big{
-      0%{-o-transform: rotate(120deg) scale(0.3);-webkit-transform: rotate(120deg) scale(0.3);-moz-transform: rotate(120deg) scale(0.3);transform: rotate(120deg) scale(0.3);}
-      50%{-o-transform: rotate(240deg) scale(0.1);-webkit-transform: rotate(240deg) scale(0.1);-moz-transform: rotate(240deg) scale(0.1);transform: rotate(240deg) scale(0.1);}
-      100%{-o-transform: rotate(360deg) scale(1);-webkit-transform: rotate(360deg) scale(1);-moz-transform: rotate(360deg) scale(1);transform: rotate(360deg) scale(1);}
-    }
-    @-o-keyframes scale_big{
-      0%{-o-transform: rotate(120deg) scale(0.3);-webkit-transform: rotate(120deg) scale(0.3);-moz-transform: rotate(120deg) scale(0.3);transform: rotate(120deg) scale(0.3);}
-      50%{-o-transform: rotate(240deg) scale(0.1);-webkit-transform: rotate(240deg) scale(0.1);-moz-transform: rotate(240deg) scale(0.1);transform: rotate(240deg) scale(0.1);}
-      100%{-o-transform: rotate(360deg) scale(1);-webkit-transform: rotate(360deg) scale(1);-moz-transform: rotate(360deg) scale(1);transform: rotate(360deg) scale(1);}
-    }
-    #eticket_section .carNumber { -webkit-animation: twinkling 3s infinite ease-in-out; -moz-animation: twinkling 3s infinite ease-in-out; -o-animation: twinkling 3s infinite ease-in-out; animation: twinkling 3s infinite ease-in-out; font-size: 1rem; font-weight: bold; }
-    #eticket_section .container { margin: 0rem auto; font-family: '微软雅黑'; }
-    #eticket_section .dateTime { padding: .35rem 0; text-align: center; color: #000; font-weight: bold; width: 100%; position: relative; }
-    #eticket_section .dateTime .date { font-size: 1rem; line-height: 1rem; padding: 0 0 .35rem; }
-    #eticket_section .dateTime .time { margin: 0 auto;/*width:5.4rem;*//*border-top:2px solid #000;*/font-size: 1.6rem; line-height: 1.6rem; /*padding:.2rem 0*/ }
-    #eticket_section .empty_box { text-align: center; color: #d7d7d7; padding: .2rem 0; border: 0 solid #e2e2e2; }
-    #eticket_section .empty_box img { vertical-align: middle; margin: 0 .1rem 0 0; width: 1.08rem; height: .89rem; }
-    #eticket_section { background: #454545; }
-    #eticket_section .dateTime .date span, #eticket_section    .dateTime .time span { font-weight: bold; }
-    #eticket_section .num { width: 5.72rem; height: .42rem; margin: 0 auto; background: url(../image/etiket_new/line_bottom.png) no-repeat; background-size: 100% 100%; }
-    #eticket_section .on_site, #eticket_section .on, #eticket_section .off_site { font-size: .48rem; font-weight: bold; color: rgba(0, 0, 0, 0.7); }
-    #eticket_section .on { font-size: .3rem; }
-    #eticket_section .line_bottom { width: 5.72rem; height: .42rem; margin: 0 auto; background: url(../image/etiket_new/line_bottom.png) no-repeat; background-size: 100% 100%; }
-    .empty { min-height: .3rem; }
-    #eticket_section .s_check { position: absolute; width: 2.31rem; height: 2.31rem; background: url(../image/etiket_new/icon_verification.png) no-repeat center; background-size: 100%; bottom: .6rem; left: 50%; margin-left: -1.155rem; }
-    #eticket_section .s_rotate { width: 0; height: 0; position: fixed; left: 50%; top: 50%; -webkit-animation: scale_big .8s infinite ease-in-out; -moz-animation: scale_big .8s infinite ease-in-out; -o-animation: scale_big .8s infinite ease-in-out; animation: scale_big .8s infinite ease-in-out; }
-    #eticket_section .ico_delta { border-left: 6.4rem solid transparent; border-right: 6.4rem solid transparent; font-size: 0; line-height: 0; margin-left: -6.4rem; margin-top: -6.4rem; }
-    #eticket_section .ico_round { border-radius: 50%; position: fixed; top: 50%; left: 50%; width: 12.8rem; height: 12.8rem; margin-left: -6.4rem; margin-top: -6.4rem; background: #666; }
-
     /*新版电子票样式*/
     .wrapper, .select_wrap { padding-bottom: 0; }
     #etiket_bg_new { display: none; height: auto; overflow: visible; }
@@ -153,8 +111,8 @@
     #etiket_bg_new .date_time .mobile { font-size: .24rem; line-height: .24rem; text-align: right; padding-top: .2rem; }
     #etiket_bg_new .date_time .mobile span { font-size: .36rem; line-height: .36rem; /* font-weight: bold; */ padding-left: .1rem; }
     .hide { display: none; }
-    .car-icon { position: absolute; left: 0; bottom: .1rem; /* width: 1.93rem; height: 1.13rem; */ margin-top: 1.04rem; /* background: url(../image/etiket_new/eticket_icon.png?v=20150918) -25.6rem 0 no-repeat; background-size: 27.53rem 2.28rem; */ -webkit-animation: car—exercise 6s linear infinite; -moz-animation: car—exercise 6s linear infinite; animation: car—exercise 6s linear infinite;
-      -webkit-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -o-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0);
+    .car-icon { position: absolute; left: -1.93rem; bottom: .1rem; /* width: 1.93rem; height: 1.13rem; */ margin-top: 1.04rem; /* background: url(image/eticket_icon.png?v=20150918) -25.6rem 0 no-repeat; background-size: 27.53rem 2.28rem; */ -webkit-animation: car—exercise 6s linear infinite; -moz-animation: car—exercise 6s linear infinite; animation: car—exercise 6s linear infinite;
+
 
      }
     .car-bg { position: relative; height: 1.74rem; margin-top: .1rem; padding-bottom: .3rem; background: url('../image/etiket_new/eticket_icon.png?v=20150918') 0 0 no-repeat; background-size: 27.53rem 2.28rem; overflow: hidden;left: 50%; max-width: 6.4rem;
@@ -171,20 +129,20 @@
 
     /* 小车运动 */
     @keyframes car—exercise {
-      from { left: 0; -webkit-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -o-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0);}
-      to { left: 100%; -webkit-transform: translate3d(100%, 0, 0); -ms-transform: translate3d(100%, 0, 0); -o-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0);}
+      from { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+      to { -webkit-transform: translate3d(8.37rem, 0, 0); -ms-transform: translate3d(8.37rem, 0, 0); -o-transform: translate3d(8.37rem, 0, 0); transform: translate3d(8.37rem, 0, 0); }
     }
     @-webkit-keyframes car—exercise {
-      from { left: 0; -webkit-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -o-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0);}
-      to { left: 100%; -webkit-transform: translate3d(100%, 0, 0); -ms-transform: translate3d(100%, 0, 0); -o-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0);}
+      from { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+      to { -webkit-transform: translate3d(8.37rem, 0, 0); -ms-transform: translate3d(8.37rem, 0, 0); -o-transform: translate3d(8.37rem, 0, 0); transform: translate3d(8.37rem, 0, 0); }
     }
     @-moz-keyframes car—exercise {
-      from { left: 0; -webkit-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -o-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); }
-      to { left: 100%;-webkit-transform: translate3d(100%, 0, 0); -ms-transform: translate3d(100%, 0, 0); -o-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); }
+      from { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+      to { -webkit-transform: translate3d(8.37rem, 0, 0); -ms-transform: translate3d(8.37rem, 0, 0); -o-transform: translate3d(8.37rem, 0, 0); transform: translate3d(8.37rem, 0, 0); }
     }
     @-o-keyframes car—exercise {
-      from { left: 0;-webkit-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -o-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); }
-      to { left: 100%; -webkit-transform: translate3d(100%, 0, 0); -ms-transform: translate3d(100%, 0, 0); -o-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0);}
+      from { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+      to { -webkit-transform: translate3d(8.37rem, 0, 0); -ms-transform: translate3d(8.37rem, 0, 0); -o-transform: translate3d(8.37rem, 0, 0); transform: translate3d(8.37rem, 0, 0); }
     }
 
     /* max-height: 416px  */
@@ -213,25 +171,7 @@
   </style>
 </head>
 <body>
-  <div class="wrapper showNone" id="eticket_section" style="display:none;" class="pageBgColor">
-    <!--<div class="empty_box showNone"><img src="../image/etiket_new/empty_icon.png">电子票待生成/已过期</div>-->
-    <div class="container">
-		    <div class="s_rotate"></div>
-      <div class="dateTime">
-    		<div class="carNumber_wrap"><span class="carNumber"></span></div>
-        <div class="date"><span></span></div>
-        <div class="time"><span></span></div>
-        <div class="num">&nbsp;</div>
-        <div class="number hide"><span></span></div>
-        <div class="on_site">&nbsp;</div>
-        <div class="on">至</div>
-        <div class="off_site">&nbsp;</div>
-        <div class="line_bottom"></div>
-        <div class="s_check"></div>
-      </div>
-    </div>
-    <div class="empty">&nbsp;</div>
-  </div>
+  <div id="MSG"></div>
 
 
   <!-- 新版电子票 -->
@@ -259,9 +199,9 @@
   </div>
 
 
-  <script src="http://static.wechat.dadabus.com/v2/res/src/js/lib/zepto.js?rev=5a687527ead16ba2ca2e5035d52a5dd4"></script>
-<script src="http://static.wechat.dadabus.com/v2/res/src/js/base.js?rev=31df0ed7140010926bc9c5f2cfde872c"></script>
-  <script type="text/javascript" src="../js/lib/md5.js"></script>
+  <script src="http://static.wechat.dadabus.com/v2/res/src/js/lib/lib.js?rev=453e927cc6f1f09965470ef9e1297bcf"></script>
+<script>ddb.isWeixin && document.write('<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"><\/script>')</script>
+  <script type="text/javascript" src="../js/lib/md5-debug.js"></script>
   <script type="text/javascript" src="../js/ticket_name.js"></script>
   <script>
     window.timerMSG = null;
@@ -331,7 +271,8 @@
                 var before10_min = ticket_time.getTime() - 10 * 60 * 1000;
                 var min_token = '';
                 if(now > before10_min){
-                    min_token = Math.round((ticket_time.getTime() /1000/60/const_min));
+                    //min_token = Math.round((ticket_time.getTime() /1000/60/const_min));
+                    min_token = start_date + line_start_time;
                     if(g_timer){
                         window.clearInterval(g_timer);
                     }
@@ -360,94 +301,71 @@
         }
 
         // 电子票底部动画配置
-        item.ticket_ad = {
+       /* item.ticket_ad = {
           mid_bg:{},
           left_button:{
-            image_url: "../image/etiket_new/active-btn-movie.png",
-            target_url: 'http://cps.maizuo.com/changeUrl.htm?channelId=191&urlId=338'
+            image_url: "../image/etiket_new/active-btn-movie2.png",
+            target_url: 'http://m.maizuo.com/active/536'
           },
           bottom_animate:{
-            image_url: "../image/etiket_new/active-icon-movie.png",
-            target_url: 'http://cps.maizuo.com/changeUrl.htm?channelId=191&urlId=338'
+            image_url: "../image/etiket_new/active-icon-movie2.png",
+            target_url: 'http://m.maizuo.com/active/536'
           }
-        };
+        };*/
+        var defaultMove = true;
 
         if( item.ticket_ad ){
           var ad = item.ticket_ad;
+          if( ad.mid_bg && ad.mid_bg.image_url ){            
+            $('#etiket_bg_new .date_time .random').css({"background": "url("+ad.mid_bg.image_url+")" ,"background-size":"cover" } );
+            /*var target_url = ad.mid_bg.target_url; .css("background-size","cover")*/
+            if( ad.mid_bg.target_url ){
+              $('#etiket_bg_new .date_time .random').on('click',function(){
+                window.location = ad.mid_bg.target_url;
+              });
+            }
+          }
+
           if( ad.left_button && ad.left_button.image_url ){
             $('.active-btn').attr('src',ad.left_button.image_url).show();
-            var target_url = ad.left_button.target_url;
-            if( target_url ){
+            /*var target_url = ad.left_button.target_url;*/
+            if( ad.left_button.target_url ){
               $('.active-btn').on('click',function(){
-                window.location = target_url;
+                window.location = ad.left_button.target_url;
               });
             }
           }
 
           if( ad.bottom_animate && ad.bottom_animate.image_url ){
              $('.active-move').attr('src',ad.bottom_animate.image_url).show();
-              var target_url = ad.bottom_animate.target_url;
-              if( target_url ){
+             defaultMove = false;
+              /*var target_url = ad.bottom_animate.target_url;*/
+              if( ad.bottom_animate.target_url ){
                 $('.car-bg').on('click',function(){
-                  window.location = target_url;
+                  window.location = ad.bottom_animate.target_url;
                 });
               }
           }
         }
+
+        if( defaultMove ){
+          $('.active-move').attr('src',"../image/etiket_new/icon_car.png").show();
+        }
+
       if (item) {
-        $("#eticket_section .carNumber,#etiket_bg_new .car_num").text(item.line_card||item.car_number);
-            if( typeof item.start_date == "string" || item.start_date){
-              var date = new Date(item.start_date.replace(/-/g,'/'));
-            }else{
-              fnMSG('数据格式错误；start_date');
-            }
+        $("#etiket_bg_new .car_num").text(item.line_card||item.car_number);
+        if( typeof item.start_date == "string" || item.start_date){
+          var date = new Date(item.start_date.replace(/-/g,'/'));
+        }else{
+          fnMSG('数据格式错误；start_date');
+        }
         if (date) {
-          $("#eticket_section .date span,#etiket_bg_new .date_time .date_d").text((date.getMonth() + 1) + "月" + date.getDate() + "日");
+          $("#etiket_bg_new .date_time .date_d").text((date.getMonth() + 1) + "月" + date.getDate() + "日");
         }
-          if( typeof item.start_time == "string" || item.start_time){
-               $("#eticket_section .time span,#etiket_bg_new .date_time .time_d").text(item.start_time.slice(0, -3));
-            }else{
-              fnMSG('数据格式错误；start_date');
-            }
-
-        $("#eticket_section .dateTime .number").css("background-color", item.ticket_color);
-
-
-        if(item.ticket_number > 1)
-        {
-          $("#eticket_section .dateTime .number,#etiket_bg_new .date_time .num").show().find("span").text(item.ticket_number + "张");
+        $("#etiket_bg_new .date_time .time_d").text(item.start_time.slice(0, -3));
+        if(item.ticket_number > 1){
+          $("#etiket_bg_new .date_time .num").show().find("span").text(item.ticket_number + "张");
         }
-
-        $("#eticket_section .on_site").text(item.on_site_name);
-        $("#eticket_section .off_site").text(item.off_site_name);
-
-
-        //判断一天显示一种形状
-        var _date = new Date(item.start_date.replace(/-/g, '/')).getDate();
-        // var _date = new Date("2015/9/12").getDate();
-        var set_icon = _date%3;
-        if(+set_icon === 0)
-          {
-            //三角形
-            $("#eticket_section .s_rotate").addClass("ico_delta").css("border-bottom","9.4rem solid " + item.ticket_color);
-          }
-          else if(set_icon == 1)
-          {
-            //圆形
-            $("#eticket_section .s_rotate").addClass("ico_round").css("background",item.ticket_color);
-          }
-          else if(set_icon == 2)
-          {
-            //矩形
-            $("#eticket_section .s_rotate").addClass("ico_reg").css("background",item.ticket_color);
-          }
-
-        //判断版本显示新版或者旧版样式
-        //var s_version = false;
-        var s_version = item.ticket_version;
-        if( s_version ){
-            if(  +s_version == 1)
-        {
           $("body").css("background","#eee");
           $("#eticket_section").hide();
           $("#etiket_bg_new").show();
@@ -475,23 +393,16 @@
             refresh_token();
             //每分钟刷新token值, 直到上车前10分钟
             g_timer = window.setInterval(refresh_token,1000);
-         }else if(  +s_version == 0){
-          //显示旧版本
-          $("#eticket_section").show();
-          //$("#eticket_section").show();
 
-        }else{
-               fnMSG('数据格式错误；ticket_version');
-		}
-		}
       }
     };
 
 
     $(".wrapper").removeClass("showNone");
     ddb.cookie('wx_mobile', '18026928316');
-    var s = '{"eticket":{"ticket_code":"1234567890123456-yyyymmdd-1","start_date":"2015-10-13","start_time":"17:25:00","line_start_time":"17:25:00","on_site_name":"中信大厦","on_site_lng":"114.100282","on_site_lat":"22.539992","off_site_name":"红树福苑(公交站)","off_site_lng":"114.044876","off_site_lat":"22.510717","tog_line_id":"1234","line_code":"1234-1234-1234","is_checked":"0","ticket_color":"#44cef6","car_number":"粤BM1191","line_card":"","order_number":"1234567890123456","ticket_number":1,"ticket_version":1,"ticket_identifier":"0133","ticket_key":"6e80766469f4e23973e5973c4f7a2766"} }';
+    var s = '{"eticket":{"ticket_code":"0123456789012345-yyyymmdd-1","start_date":"2015-11-03","start_time":"17:25:00","line_start_time":"17:25:00","off_site_name":"红树福苑(公交站)","off_site_lng":"114.044876","off_site_lat":"22.510717","on_site_name":"中信大厦","on_site_lng":"114.099928","on_site_lat":"22.540681","tog_line_id":"1234","line_code":"0123-0123-0123","is_checked":"0","ticket_color":"#ff4777","car_number":"粤BM1191","line_card":"","order_number":"0123456789012345","ticket_number":1,"ticket_version":1,"ticket_identifier":"9537","ticket_key":"6badace1f2f9e617c2e9409da6de9e5b","ticket_ad":{"mid_bg":[],"left_button":[],"bottom_animate":[]}} }';
     up_ticket(s);
+
   </script>
 </body>
 </html>
